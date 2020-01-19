@@ -1,0 +1,34 @@
+#modules name,if not ,not input
+use-session: sy
+base:
+  url: /sy/SY_ORG/listQuery
+scenarios:
+  -
+    desc: query
+    ins:
+      method: get
+      data:
+#        parentEntityId:
+#        parentFuncCode:
+#        topEntityId:
+#        topFuncCode: SY_ORG
+#        queryParam: {"tableName":null,"columnValues":null}
+    outs:
+      status: 3200
+#      msg: ok
+      data:
+#        voList:
+#          -
+#            tableName: sy_org
+
+#
+#  - desc: login with unmatched username and password
+#    use-session: false
+#    ins:
+#      data:
+#        username: admin
+#        password: admin
+#    outs:
+#      status: -101
+#      msg: unmatched username and password
+#      link: /login

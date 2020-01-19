@@ -11,3 +11,7 @@ URL='url'
 ENV_BASE_HEADER='env_base_header'
 METHOD='method'
 DATA='data'
+# 登录用户
+LOGIN_NAME='login_name'
+PASSWORD='password'
+LOGIN_TYPE='login_type'

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 import yaml
 class Config():
     # def __init__(self,fspath):
@@ -9,5 +10,10 @@ class Config():
             with open(fspath,'r') as f:
                 raw=yaml.safe_load(f)
         else:
-            raw = yaml.safe_load(fspath.open())
+            raw = yaml.safe_load(fspath.open(encoding='utf-8'))
         return raw
+
+def get_env():
+    root_dir=os.path.dirname(os.path.dirname(__file__))
+    env_path=os.path.join(root_dir,'config','env.yml')
+    return Config.load(env_path)

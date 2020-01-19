@@ -9,7 +9,7 @@ def assert_dict(actual, expected):
 
         if isinstance(value, dict):
             assert_dict(actual.get(key), value)
-        elif isinstance(value, (str, bool)):
+        elif isinstance(value, (str, bool,int)):
             assert value == actual.get(key)
         elif isinstance(value, list):
             # assert len(value) == len(actual.get(key))

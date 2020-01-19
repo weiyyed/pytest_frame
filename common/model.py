@@ -2,7 +2,7 @@ import os
 import pytest
 import requests
 # from httprunner.client import HttpSession
-
+from . import session
 from common import tags, config, asserts
 
 root_dir=os.path.dirname(os.path.dirname(__file__))
@@ -63,7 +63,8 @@ class Scenario(pytest.Item):
 
         http_session = requests.session()
         if self.use_session:
-            http_session = HttpSession()
+            hd_sessions=session.HdProdSession()
+            http_session = hd_sessions.get_session(module=self.use_session)
             prep = http_session.prepare_request(req)
         else:
             prep = req.prepare()

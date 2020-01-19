@@ -16,4 +16,4 @@ if __name__ == '__main__':
     logging.info("start run pytest")
     # report_path=os.path.join(root_dir,ENV.get('report-path'))
     # pytest.main(['-q','--html',report_path])
-    pytest.main()
+    pytest.main(['-sv'])
