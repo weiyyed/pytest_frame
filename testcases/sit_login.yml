@@ -1,0 +1,26 @@
+use-session: false
+base:
+  url: /login
+scenarios:
+  -
+    desc: login with correct username and password
+    ins:
+      data:
+        username: admin
+        password: changeme
+    outs:
+      status: 0
+      msg: ok
+      data: admin
+      link: /
+
+  - desc: login with unmatched username and password
+    use-session: false
+    ins:
+      data:
+        username: admin
+        password: admin
+    outs:
+      status: -101
+      msg: unmatched username and password
+      link: /login

@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+BASE='base'
+USE_SESSION='use-session'
+SCENARIOS='scenarios'
+DESC='desc'
+INS='ins'
+OUTS='outs'
+HEADERS='headers'
+ENV_BASE_URL='env_base_url'
+URL='url'
+ENV_BASE_HEADER='env_base_header'
+METHOD='method'
+DATA='data'
