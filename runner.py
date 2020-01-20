@@ -3,8 +3,6 @@ import os
 import pytest
 from common import config
 
-
-
 root_dir=os.path.dirname(__file__)
 
 env_conf_file=os.path.join(root_dir,'config','env.yml')

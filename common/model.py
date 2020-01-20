@@ -3,7 +3,7 @@ import os
 import pytest
 import requests
 # from httprunner.client import HttpSession
-from . import session
+from . import sessions
 from common import tags, config, asserts
 
 root_dir=os.path.dirname(os.path.dirname(__file__))
@@ -11,6 +11,9 @@ env_conf_file=os.path.join(root_dir,'config','env.yml')
 ENV=config.Config.load(env_conf_file)
 
 class Feature(pytest.File):
+    '''
+    用于yml用例文件时，收集用例
+    '''
     def collect(self):
         count = 1
         feature = config.Config.load(self.fspath)
@@ -64,7 +67,7 @@ class Scenario(pytest.Item):
 
         http_session = requests.session()
         if self.use_session:
-            hd_sessions=session.HdProdSession()
+            hd_sessions=sessions.HdProdSession()
             http_session = hd_sessions.get_session(module=self.use_session)
             prep = http_session.prepare_request(req)
         else:

@@ -16,7 +16,7 @@ class Session():
     def __init__(self):
         self.headers=ENV.get(tags.HEADERS)
         option = Options()
-        option.add_argument("--headless")
+        option.add_argument("--headless1")
         option.add_argument("--disable-gpu")
         self.driver = webdriver.Chrome(options=option)
         self.sessions={}
@@ -70,7 +70,8 @@ class HdProdSession(Session):
             if module not in self.sessions.keys():
                 url = ENV.get('{}_url'.format(module))
                 self._login(url)
-                self.driver.get(url)
+                if module=='sy':
+                    self.driver.get(url+'/#eyJtYyI6InN5IiwiZmMiOiJTWV9PUkciLCJ1YyI6IjAxNzAwMDIwIn0=')
                 sess=super(HdProdSession,self).get_session()
                 self.close()
                 self.sessions[module]=sess
