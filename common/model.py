@@ -1,3 +1,4 @@
+import logging
 import os
 import pytest
 import requests
@@ -45,7 +46,7 @@ class Scenario(pytest.Item):
         url = (ENV.get(tags.ENV_BASE_URL, '') + self.base.get(tags.URL, '') + self.ins.get(tags.URL, '/')).replace(
             '[^:]//', '/')
         if not url.endswith('/'): url = url + '/'
-
+        logging.info("run test {} :: url:{}".format(self.name,url))
         headers = self.ins.get(tags.HEADERS, {})
         self._append_attrs(headers, self.base, tags.HEADERS)
         self._append_attrs(headers, ENV, tags.ENV_BASE_HEADER)

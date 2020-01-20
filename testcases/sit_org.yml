@@ -17,9 +17,7 @@ scenarios:
       status: 3200
 #      msg: ok
       data:
-#        voList:
-#          -
-#            tableName: sy_org
+        $.voList[0].tableName: sy_org
 
 #
 #  - desc: login with unmatched username and password

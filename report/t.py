@@ -1,60 +1,22 @@
-class A():
-    def go(self):
-        print ("go A go!")
-    def stop(self):
-        print ("stop A stop!")
-    def pause(self):
-        raise Exception("Not Implemented")
-class B(A):
-    def go(self):
-        super(B, self).go()
-        print ("go B go!")
-class C(A):
-    def go(self):
-        super(C, self).go()
-        print ("go C go!")
-    def stop(self):
-        super(C, self).stop()
-        print ("stop C stop!")
-class D(B,C):
-    def go(self):
-        super(D, self).go()
-        print ("go D go!")
-    def stop(self):
-        super(D, self).stop()
-        print ("stop D stop!")
-    def pause(self):
-        print ("wait D wait!")
-class E(B,C):
-    pass
-a = A()
-b = B()
-c = C()
-d = D()
-e = E()
+import yaml
+import logging.config
+import os
 
-# a.go()
-# print('--------')
-# b.go()
-# print('--------')
-# c.go()
-# print('--------')
-d.go()
-print('--------')
-e.go()
-print('--------')
-a.stop()
-print('--------')
-b.stop()
-print('--------')
-c.stop()
-print('--------')
-d.stop()
-print('--------')
-e.stop()
-print(D.mro())
-# a.pause()
-# b.pause()
-# c.pause()
-# d.pause()
-# e.pause()
+def setup_logging(path = "logging.yml",default_level = logging.INFO):
+    if os.path.exists(path):
+        with open(path,"r") as f:
+            config = yaml.load(f)
+            logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level = default_level)
+
+def func():
+    logging.info("start func")
+
+    logging.info("exec func")
+
+    logging.info("end func")
+
+if __name__ == "__main__":
+    setup_logging(default_path = "logging.yml")
+    func()
