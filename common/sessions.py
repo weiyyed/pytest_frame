@@ -16,7 +16,7 @@ class Session():
     def __init__(self):
         self.headers=ENV.get(tags.HEADERS)
         option = Options()
-        option.add_argument("--headless1")
+        option.add_argument("--headless")
         option.add_argument("--disable-gpu")
         self.driver = webdriver.Chrome(options=option)
         self.sessions={}

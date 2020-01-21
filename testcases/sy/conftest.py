@@ -19,7 +19,7 @@ def session():
 def add_org(session):
 
     url=ENV.get(tags.ENV_BASE_URL)+'/sy/SY_ORG/cardSave'
-    params=
-    data_json=
+    params=''
+    data_json=''
     r=session.post(url,json=data_json,params=params)
     assert r.json().get('status')==3200
