@@ -1,0 +1,70 @@
+[
+  {
+    "name": "add_org",
+    "url": "/sy/SY_ORG/cardSave",
+    "method": "post",
+    "params":
+    {
+      "parentEntityId": null,
+      "parentFuncCode": null,
+      "topFuncCode": "SY_ORG",
+      "contentType": "json",
+      "ajax": true,
+      "tid": 2000000000003
+    },
+    "data": {
+      "tableName": "sy_org",
+      "isenable": "1",
+      "isshow": "0",
+      "parentname": "w0720租户",
+      "orgcode": "000121",
+      "org_type": "org",
+      "parentid": 2000000000073,
+      "dataStatus": 0,
+      "ver": 1,
+      "created_by": 2000000001572,
+      "created_dt": "2020-01-20 16:36:53",
+      "updated_by": null,
+      "updated_dt": "2020-01-20 16:36:53",
+      "df": 0,
+      "tenantid": 2000000000003,
+      "ts": null,
+      "isShow": null,
+      "orgname": "自动测试"
+    }
+  },
+   {
+    "name": "add_org2",
+    "url": "/sy/SY_ORG/cardSave",
+    "method": "post",
+    "params":
+    {
+      "parentEntityId": null,
+      "parentFuncCode": null,
+      "topFuncCode": "SY_ORG",
+      "contentType": "json",
+      "ajax": true,
+      "tid": 2000000000003
+    },
+    "data": {
+      "tableName": "sy_org",
+      "isenable": "1",
+      "isshow": "0",
+      "parentname": "w0720租户",
+      "orgcode": "000121",
+      "org_type": "org",
+      "parentid": 2000000000073,
+      "dataStatus": 0,
+      "ver": 1,
+      "created_by": 2000000001572,
+      "created_dt": "2020-01-20 16:36:53",
+      "updated_by": null,
+      "updated_dt": "2020-01-20 16:36:53",
+      "df": 0,
+      "tenantid": 2000000000003,
+      "ts": null,
+      "isShow": null,
+      "orgname": "自动测试"
+    }
+  }
+]
