@@ -4,7 +4,7 @@ base:
   url: /sy/SY_ORG/listQuery
 scenarios:
   -
-    desc: query
+    desc: query11
     ins:
       method: get
       data:
@@ -18,7 +18,16 @@ scenarios:
 #      msg: ok
       data:
         $.voList[0].tableName: sy_org
-
+  -
+    desc: query02
+    ins:
+      method: get
+      data:
+    outs:
+      status: 3200
+#      msg: ok
+      data:
+        $.voList[0].tableName: sy_org
 #
 #  - desc: login with unmatched username and password
 #    use-session: false
