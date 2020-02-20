@@ -1,10 +1,10 @@
 [
   {
     "name": "add_org",
+    "description": "添加组织"
     "url": "/sy/SY_ORG/cardSave",
     "method": "post",
-    "params":
-    {
+    "params": {
       "parentEntityId": null,
       "parentFuncCode": null,
       "topFuncCode": "SY_ORG",
@@ -12,7 +12,7 @@
       "ajax": true,
       "tid": 2000000000003
     },
-    "data": {
+    "data_json": {
       "tableName": "sy_org",
       "isenable": "1",
       "isshow": "0",
@@ -32,13 +32,124 @@
       "isShow": null,
       "orgname": "自动测试"
     }
+    "response": {
+      "status": 3200,
+      "data": {
+        "data": {
+          "tableName": "sy_org",
+          "updated_by_name": "系统管理员",
+          "parentname": "机关职能部门",
+          "ismaximo": null,
+          "dataStatus": 0,
+          "ver": 1,
+          "created_by": 1000,
+          "created_dt": "2019-03-22 12:33:10",
+          "updated_by": 1000,
+          "updated_dt": "2020-02-20 16:28:31",
+          "df": 0,
+          "tenantid": 1,
+          "ts": 1582187311420,
+          "orgid": 2000000000298,
+          "orgcode": "010103",
+          "orgname": "计划处",
+          "isenable": 1,
+          "parentid": 2000000000215,
+          "orglayer": null,
+          "isleaf": 1,
+          "innercode": "00010000000G",
+          "isShow": 0,
+          "points": null,
+          "org_type": "org"
+        },
+        "btnList": [
+          {
+            "tableName": "sy_form_button",
+            "columnValues": null,
+            "dataStatus": 0,
+            "ver": 1,
+            "created_by": null,
+            "created_dt": "2016-05-04 15:08:46",
+            "updated_by": 1000,
+            "updated_dt": "2016-05-04 15:08:46",
+            "df": 0,
+            "tenantid": 1,
+            "ts": null,
+            "btn_id": 472227,
+            "formid": 472212,
+            "form_code": "SY_ORG",
+            "btn_code": "saveBack",
+            "btn_name": "保存返回",
+            "btn_order": 1,
+            "btn_show_control": null,
+            "btn_type": "card",
+            "btn_group": "modify",
+            "btn_isenable": 1,
+            "btn_history": null,
+            "btn_param": null,
+            "btn_comment": null,
+            "btn_show_group": null,
+            "btn_inputconfig": null,
+            "btn_hotkey": null,
+            "btn_event": null,
+            "btn_event_order": null,
+            "btn_css": null,
+            "btn_property": null,
+            "btn_is_default": 0,
+            "product_flag": 1
+          },
+          {
+            "tableName": "sy_form_button",
+            "columnValues": null,
+            "dataStatus": 0,
+            "ver": 1,
+            "created_by": null,
+            "created_dt": "2016-05-04 15:08:52",
+            "updated_by": 1000,
+            "updated_dt": "2016-05-04 15:08:52",
+            "df": 0,
+            "tenantid": 1,
+            "ts": null,
+            "btn_id": 472228,
+            "formid": 472212,
+            "form_code": "SY_ORG",
+            "btn_code": "cardSave",
+            "btn_name": "保存",
+            "btn_order": 2,
+            "btn_show_control": null,
+            "btn_type": "card",
+            "btn_group": "modify",
+            "btn_isenable": 1,
+            "btn_history": null,
+            "btn_param": null,
+            "btn_comment": null,
+            "btn_show_group": null,
+            "btn_inputconfig": null,
+            "btn_hotkey": null,
+            "btn_event": null,
+            "btn_event_order": null,
+            "btn_css": null,
+            "btn_property": null,
+            "btn_is_default": 0,
+            "product_flag": 1
+          }
+        ],
+        "readonly": false
+      },
+      "messages": [
+        {
+          "message": "保存成功",
+          "messageLevel": "INFO",
+          "messageShowType": "FLOW"
+        }
+      ]
+    }
   },
-   {
+  {
     "name": "add_org2",
+    "description": "添加组织"
     "url": "/sy/SY_ORG/cardSave",
     "method": "post",
-    "params":
-    {
+    "params": {
       "parentEntityId": null,
       "parentFuncCode": null,
       "topFuncCode": "SY_ORG",

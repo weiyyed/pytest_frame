@@ -7,4 +7,5 @@ def read_json(file):
     :param file:
     :return:
     '''
-    return json.load(file, ensure_ascii=False)
+    with open(file,'r',encoding='utf-8') as f:
+        return json.load(f)
